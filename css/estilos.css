@@ -1,0 +1,489 @@
+/* CSS Documento */
+
+/*estilos generales*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: fira-sans, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.9em;
+    color: #933403;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 2.5em;
+    color: #933403;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+.separador {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    border-style: dashed;
+    border-width: thin;
+    border-color: #EFE9E9;
+}
+
+/*encabezado*/
+header {
+    background-image: url("../img/cabecera-fondo.jpg");
+    height: 381px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo{
+    width: 100%;
+    max-width: 325px;
+    padding: 40px 0;
+    margin: auto;
+}
+
+.logo img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    
+}
+
+.eslogan {
+    font-family: jubilat,serif;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    font-size: 140%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+@keyframes menu {
+    0% {transform: translateX(-1px)}
+    100% {transform: translateX(1px)}
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: fira-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    
+}
+
+.menu a:hover {
+    color: #E5B409;
+    animation-name: menu;
+    animation-duration: 1s;
+    
+}
+
+
+/*Seccion destinos naturales*/
+.natural {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.natural > .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.natural-izq {
+    width: 100%;
+    max-width: 500px;    
+}
+
+.natural-izq h2 {
+    padding: 0 0 30px 0;
+    max-width: 410px;
+    text-transform: capitalize;
+    
+}
+
+/*colocando un borde corto al titulo "Destino naturales en argentina para conocer"*/
+.natural-izq > h2::after {
+    content: '';
+    display: block;
+    padding: 20px 0 0 0;
+    width: 100px;
+    height: 1px;
+    border-bottom: 2px solid #6C6C6C;
+}
+
+.natural-izq p {
+    font-weight: 500;
+    font-style: normal;
+    max-width: 350px;
+    font-size: 1.2em;
+}
+
+
+.natural-der {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    
+}
+
+.fondo-imagen {
+    padding: 20px 0 20px 20px;
+    height: 87px;
+    margin-bottom: 12px;
+    max-height: 87px;
+    border-radius: 10px;
+}
+
+.fondo-imagen h3 {
+    color: white;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5em;
+}
+
+.imagen1 {
+    background-image: url("../img/bariloche.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.imagen2 {
+    background-image: url("../img/iguazu.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.imagen3 {
+    background-image: url("../img/nahuel-hapi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.imagen4 {
+    background-image: url("../img/jujuy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+@keyframes banner-natural {
+    from {filter: sepia(1)}
+    to {filter: sepia(0)}
+}
+
+.enlace-iamgen .fondo-imagen:hover {
+    opacity: 0.8;
+    animation-name: banner-natural;
+    animation-duration: 2s;
+}
+
+@keyframes boton {
+    0% {background-color: #E5B409; transform: scale(1,1);}
+    100% {background-color: #A07D06; transform: scale(1.1, 1.1);}
+}
+
+.boton {
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #E5B409;
+    margin: 40px auto 5px auto;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    max-width: 80px;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: #A07D06;
+    animation-name: boton;
+    animation-duration: 1s;
+    transition: all 0.3s ease-in-out;
+}
+
+@media all and (max-width: 1024px) {
+    
+    .contenedor {
+        max-width: 80%;
+    }
+    
+    .natural-izq {
+        width: 100%;
+        max-width: 650px;
+    }
+    
+    .natural-izq p {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media all and (max-width:320px){
+    .fondo-imagen h3 {
+    color: white;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    }
+    
+}
+/*Sección destino del mes*/
+.titulo-destino-mes {
+    margin-bottom: 50px;
+}
+.banner-ciudad {
+    height: 473px;
+    background-image: url("../img/cuba-fondo-banner.jpg");
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.banner-ciudad > .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.ciudad-titulo {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ciudad-titulo h4 {
+    font-size: 8.8em;
+    font-weight: 900;
+    font-style: normal;
+    color: rgba(224,243,25,0.90);
+    text-transform: uppercase;
+    line-height: 90%;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+}
+
+.ciudad-titulo h5 {
+    font-size: 1.3em;
+    font-weight: 600;
+    font-style: oblique;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.ciudad-descripcion {
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.opacidad-descripcion {
+    padding: 20px;
+    background-color: rgba(230,12,60,0.62);
+    border-radius: 10px;
+}
+
+/*Seccion ciudades de cuba*/
+.seccion-ciudad > .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+
+.imagen-ciudad {
+    width: 100%;
+    max-width: 574px;
+    border-radius: 10px;
+}
+
+.imagen-ciudad img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contenido-ciudad {
+    width: 100%;
+    max-width: 500px;
+}
+
+.contenido-ciudad h3, h5 {
+    margin: 10px 0 10px 0;
+}
+
+.contenido-ciudad h5 {
+    font-size: 1.0em;
+}
+
+.contenido-ciudad p {
+    font-size: 1.1em;
+}
+
+.contenido-ciudad > .boton {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.seccion-ciudad > .inverso {
+    flex-direction: row-reverse;
+}
+
+
+@media all and (max-width: 1024px) {
+    
+    .banner-ciudad {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    
+    .ciudad-descripcion {
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 15px;    
+    }
+    
+    .seccion-ciudad > .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    }
+    
+    .banner-ciudad > .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    }
+
+}
+
+@media all and (max-width:320px) {
+    .ciudad-titulo h4 {
+    font-size: 5em;
+    font-weight: 900;
+    font-style: normal;
+    color: rgba(224,243,25,0.90);
+    text-transform: uppercase;
+    line-height: 90%;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+}
+}
+/*Sección de formulario*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.formulario input, textarea {
+    margin: 10px 0 0 0;
+    padding: 5px;
+    border-color: #E5B409;
+    border-style: solid;
+    border-width: thin;
+}
+
+input, textarea:focus {
+     color: #E5B409;
+}
+.formulario input {
+    height: 30px;
+}
+
+.formulario #enviar {
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #E5B409;
+    margin: 40px auto 5px auto;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 80px;
+    text-align: center;
+    height: 40px;
+    border-style: none;
+}
+
+#enviar:hover {
+    background-color: #A07D06;
+}
+
+/*Pie de pagina*/
+footer {
+    background-color: #E5B409;
+    color: white;
+    height: 100px;
+    display: flex;
+    text-align: center;
+}
+
+footer p {
+    justify-content: center;
+}
